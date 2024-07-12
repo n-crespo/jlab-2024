@@ -36,3 +36,14 @@
 - began working on the poster presentation
 - building an ERD (entity relationship diagram)
 - had lunch and board games with Carol
+
+# Friday
+
+- talked with Valerie about moving cookies out of .cfm page to a custom
+  component page
+- implemented solution for cookies in custom component with ColdFusion script
+- learned that cookies cannot be set in a ColdFusion script
+- correctly implemented cookies in a custom component with ColdFusion tags
+  instead
+- redirected form submission to custom script rather than function to get around
+  cookies only being availed in function scope
