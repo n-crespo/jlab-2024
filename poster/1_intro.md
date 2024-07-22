@@ -1,7 +1,5 @@
-One of the most integral aspects of the particle accelerator at Jefferson Lab
-(JLab) is the ability to design, construct, and test of superconducting Niobium
-cavities to ensure minimal energy loss.
-
-At Jefferson Lab (JLab), the Superconducting Radio Frequency (SRF) Lab is
-responsible for the design, construction, and testing of superconducting Niobium
-cavities that are crucial to the **function** of the particle accelerator.
+In order to accelerate particles to the highest possible energy, Jefferson Lab
+utilizes superconducting radio frequency (SRF) technologies. SRF cavities and
+cryomodules are designed and constructed out of Niobium in the SRF department
+and line the linear portions of the accelerator to allow the particles to travel
+at near light speed.
