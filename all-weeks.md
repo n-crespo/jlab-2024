@@ -1,5 +1,7 @@
 # Day 4
 
+## hello
+
 - begun working on "Learn CodeFusion in a Week" training
   - start/close the server
   - manipulate/output/dump variables
@@ -20,15 +22,16 @@
     - create/use components (in the best way)
 - continued working on "Learn CodeFusion in a Week" training
 
-  - OOP, ORM
-  - Mail, Document Handling
-  - Caching, advanced caching
+- OOP, ORM
+- Mail, Document Handling
+- Caching, advanced caching
 
 - overview about the relational databases and how they work
 
   - talked about primary and foreign keys
   - talked about what the barcode scanner does (gets Transaction ID)
-  - gave us some work to do for today (get a query working with the Transaction ID as input)
+  - gave us some work to do for today (get a query working with the Transaction
+    ID as input)
 
 - implemented session persistent cookies to store previously selected options
   for traveler information (location, location acronym, action, action acronym)
@@ -78,10 +81,13 @@
 - completed query to update inventory table with new location
 - refactored and consolidated all team's code into custom component and
   specialized, modularized functions
-- added check for existing record to avoid redundant insert/updating of transaction log
+- added check for existing record to avoid redundant insert/updating of
+  transaction log
 
-- successfully reverse engineered query to search inventory for transaction ID for testing purposes
-- added a function with special conditional and more descriptive inventory query that:
+- successfully reverse engineered query to search inventory for transaction ID
+  for testing purposes
+- added a function with special conditional and more descriptive inventory query
+  that:
   - returns true if the logs should be updated, false if they shouldn't
   - displays the reason for not updating the logs if false (part has already
     been issued/no longer in inventory, )
