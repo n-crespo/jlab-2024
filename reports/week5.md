@@ -5,3 +5,7 @@
   - returns true if the logs should be updated, false if they shouldn't
   - displays the reason for not updating the logs if false (part has already
     been issued/no longer in inventory, )
+
+# Tuesday
+
+- attended Pansophy Team Meeting where we discussed the work I did on Monday
