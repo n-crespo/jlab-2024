@@ -1,7 +1,9 @@
 # Introduction
 
-The superconducting radio frequency (SRF) cavities that line the linear particle accelerator at Jefferson Lab allow for near zero energy loss and enable particles to travel at close to the speed of light. However, the highly specialized nature of SRF technology means Jefferson Lab must design, construct and test SRF cavities in house. Though this allows the Lab to produce cavities for accelerator facilities around the world, it also presents an exceedingly difficult challenge in the area of inventory and data management. Pansophy, an internal data management system is a all-encompassing solution to this problem.
+The superconducting radio frequency (SRF) cavities that line the linear particle accelerator at Jefferson Lab allow for near zero energy loss and enable particles to travel at close to the speed of light. However, the highly specialized nature of SRF technology means Jefferson Lab must design, construct and test SRF cavities in house. Though this allows the Lab to produce cavities for accelerator facilities around the world, it also presents an exceedingly difficult challenge in inventory and data management. Pansophy, an internal data management system is an all-encompassing solution to this problem.
 
-The automation of data entry and collection in the Pansophy system is crucial for minimizing human error.
+Pansophy is an internal website that is only accessible inside of Jefferson Lab's firewall. Its front end is written in ColdFusion, JavaScript and CSS, with ColdFusion being used mainly due to its ability to seamlessly embed SQL (Structured Query Language) onto a webpage. ColdFusion is an HTML-like language with its own plethora of custom tags and a built-in scripting language, CFScript.
 
-aid in SRF cavity construction for sister accelerator facilities, it also produces an exceedingly difficult challenge in inventory and information management as parts frequently move in, out and around Jefferson Lab.
+SQL is used to query the two main relation Oracle databases: the PRIMeS (Production and Research Inventory Management System) and Travelers. Each database houses a collection of tables each with a primary key and various foreign keys. By cross referencing the correct tables, relevant information about a part or traveler can be discerned even when provided limited information.
+
+To ensure the correctness and proper usability of Pansophy, typos and human error must be minimized. Thus, any automation of data collection that results in less manual entry by an engineer is very beneficial.

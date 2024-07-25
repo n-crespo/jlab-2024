@@ -47,14 +47,12 @@
 
   - although the default value is supposed to be the value of the stored cookie,
     the browser's cache overrides this and sometimes shows a different, previously
-    entered default value
-  - this shouldn't be a problem in actual use because the page's cache will have
-    refreshed and the cookie drop-down will only need to be accessed once
+    entered default value - this shouldn't be a problem in actual use because the
+    page's cache will have refreshed and the cookie drop-down will only need to be
+    accessed once
 
-- met with mike to discuss problems with testing my code for getting the max
-  revision number
-- separated code into multiple files so data stored in cookies is stored
-  properly
+- met with mike to discuss problems with testing my code for getting the max revision number
+- separated code into multiple files so data stored in cookies is stored properly
 
 - had a meeting with mike to discuss testing our traveler ID generation code
   - we learned that the data/IDs in the dev database are not the same as the
