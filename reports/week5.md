@@ -11,6 +11,7 @@
 - worked on the pictures for my poster
 - began working on creating a flow chart/logic diagram that will describe the flow of my code
 - restructured a lot of code to make debugging easier
+- poster peer review
 
 # Wednesday
 
