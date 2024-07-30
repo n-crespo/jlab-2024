@@ -8,7 +8,7 @@
 
 ## `onApplicationStart`
 
-```java
+```javascript
 component {
   function onApplicationStart(){
     application.datasource = "my_database"; return true;
@@ -52,6 +52,9 @@ component {
 - [more settings](http://help.adobe.com/en_US/ColdFusion/10.0/CFMLRef/WSc3ff6d0ea77859461172e0811cbec22c24-750b.html)
 
 > [!WARNING] > `Application.cfm` is a sign of old code
+
+> [!NOTE]
+> hello
 
 # Example `Application.cfc`
 

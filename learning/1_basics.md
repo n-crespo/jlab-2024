@@ -38,7 +38,7 @@
 
 - `cfsavecontent`
 
-```cf
+```html
 <cfsavecontent variable="EmailContent">
   Hi. We want to send you a hoverboard. Let us know if you will accept this free
   offer. -Us
@@ -86,7 +86,7 @@
 > [!NOTE]
 > Every parameter is a string
 
-```cf
+```html
 <cfset ThingsILike = ["Warm Sandy Beaches", "Tropical Drinks", 42]>
 <cfloop array="#ThingsILike#" index="thing">
     <cfoutput>#thing#</cfoutput>
@@ -102,7 +102,7 @@
 - creation (empty: curly braces)
   - `<cfset FruitBasket = {}>`
 
-```cf
+```html
 <cfset fruitBasket = {
     "Apple" = "Like",
     "Banana" = "Like",
