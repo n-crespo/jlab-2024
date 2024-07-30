@@ -2,4 +2,6 @@
 
 Before the scanning of a barcode and thus introduction of a Transaction ID, some preliminary information is required. By allowing an admin user to set session-persistent cookies on every computer on the floor of the Test Lab, the system can retain the work center, action, and location ID values. The work center variable contains the precise location of the user's machine, the action variable defines the procedure the user is doing at that location, and the location ID is used to more precisely identify the current location. This information is crucial to selecting the correct traveler page to display to the user.
 
-Since the barcode scanner inserts the transaction ID as if it was typed manually, a single text entry box is all that is needed for acquiring the Transaction ID.
+Since the barcode scanner inserts the transaction ID as if it was typed manually, a single text entry box is all that is needed for acquiring the Transaction ID. Once entered, the program is able to create a Traveler ID in the format "{PROJECT NAME}-{WORK CENTER}-{ACRONYM/PART NAME}-{ACTION}". Using this Traveler ID, a corresponding URL can be built that will redirect the user to the appropriate traveler page.
+
+Furthermore, proper error checking must be implemented to account for bad entry, unexpected query results and undefined cookies. For example, if there is a possibility of multiple travelers fitting the criteria prescribed by the user, the system should be able to present the user with a list of relevant Traveler ID's and allow the user to search and select one.

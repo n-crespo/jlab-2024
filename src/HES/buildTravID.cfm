@@ -14,7 +14,7 @@ Enter Transaction ID: <cfinput name = "tid" type = "text" maxlength = "9" autofo
 
     <!-- build traveler ID-->
     <cfinvoke component="TravIDBuilder" method = "getTravID" returnVariable = "trav_id"
-    tid = "#tid#" workcenter = "#cookie.wca#" action = "#cookie.action#">
+    tid = "#tid#">
 
     <!--- make sure this only happens if form to select traveler ID has been submitted --->
     <!-- update trav_id with revision number-->
