@@ -16,11 +16,6 @@ Enter Transaction ID: <cfinput name = "tid" type = "text" maxlength = "9" autofo
     <cfinvoke component="TravIDBuilder" method = "getTravID" returnVariable = "trav_id"
     tid = "#tid#">
 
-    <!--- make sure this only happens if form to select traveler ID has been submitted --->
-    <!--- update trav_id with revision number --->
-    <cfinvoke component = "TravIDBuilder" method = "getRevisionNumber" returnVariable = "revisionNum" trav_id = "#trav_id#">
-    <cfset "trav_id_r" = #trav_id# & "-" & #revisionNum#>
-
     <!--- check if logs should be updated--->
     <cfinvoke component="TravIDBuilder" method="shouldUpdateLogs" returnvariable="shouldUpdateLogs" TID="#tid#">
     <!--- only update the logs if needed --->
@@ -32,15 +27,21 @@ Enter Transaction ID: <cfinput name = "tid" type = "text" maxlength = "9" autofo
         <cfinvoke component = "TravIDBuilder" method = "updateTransactionLog" TID = "#tid#">
     </cfif>
 
-    <!--- this is needed for redirection --->
-    <cfquery name="GetMaxPage" datasource="#application.dsrc#">
-        SELECT TRAV_MAX_PAGE as MAXPAGE
-        FROM TRAV_HEADER
-        WHERE TRAV_REVISION = '#revisionNum#'
-        AND TRAV_ID = '#trav_id#'
-    </cfquery>
+    <!--- make sure this only happens if form to select traveler ID has been submitted --->
+    <!--- update trav_id with revision number --->
+    <cfinvoke component = "TravIDBuilder" method = "getRevisionNumber" returnVariable = "revisionNum" trav_id = "#trav_id#">
+    <cfset "trav_id_r" = #trav_id# & "-" & #revisionNum#>
+
 
     <cfif "#revisionNum#" neq "">
+      <!--- this is needed for redirection --->
+      <cfquery name="GetMaxPage" datasource="#application.dsrc#">
+          SELECT TRAV_MAX_PAGE as MAXPAGE
+          FROM TRAV_HEADER
+          WHERE TRAV_REVISION = '#revisionNum#'
+          AND TRAV_ID = '#trav_id#'
+      </cfquery>
+
         <!--- separate project name --->
         <cfset delimiterPosition = Find("-", "#trav_id#")>
         <cfset CPname = Left('#trav_id#', delimiterPosition - 1)>
