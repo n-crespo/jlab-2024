@@ -43,12 +43,12 @@
 
     <!---mike's query to match possible traveler IDs--->
     <cfquery name="mike_query" datasource="#application.dsrc#">
-    SELECT DISTINCT 
-        max_travs.trav_id travid, 
+    SELECT DISTINCT
+        max_travs.trav_id travid,
         vartype acronym,
-        max_travs.maxrev rev, 
+        max_travs.maxrev rev,
         TRIM(max_travs.trav_id) || ' (' || TRIM(vartype) || ')' AS displayText
-    FROM 
+    FROM
     adappstst.trav_header th,
     adappstst.trav_vars tv,
         (SELECT TRAV_ID, max(trav_revision) maxrev
@@ -154,7 +154,7 @@
         <!--- this checks the inventory for matching records --->
         <cfquery name="checkInventory" datasource="#application.FacilityDSN#">
             SELECT i.INVENTORYID, i.PARTID, i.SERIALNUMBER, i.LOCATIONID
-            FROM #application.schema#.INV_INVENTORY i 
+            FROM #application.schema#.INV_INVENTORY i
             WHERE i.PARTID = <cfqueryparam value="#existingLogInfo.PARTID#" cfsqltype="cf_sql_integer">
             AND i.SERIALNUMBER = <cfqueryparam value="#existingLogInfo.SERIALNUMBER#" cfsqltype="cf_sql_varchar">
         </cfquery>
@@ -166,7 +166,7 @@
             <cfelse> <!--- Part exists and is in a different location, so update --->
                 <cfreturn true>
             </cfif>
-        <cfelseif checkInventory.RecordCount() GT 1> 
+        <cfelseif checkInventory.RecordCount() GT 1>
             <!--- this should never happen, means part is duplicated in the inventory --->
             <cfreturn false>
         <cfelseif checkInventory.RecordCount() == 0>
@@ -184,7 +184,7 @@
 
     <cfquery name = "updateTransactionLog" datasource = "#application.FacilityDSN#">
         INSERT INTO #application.schema#.INV_TRANSACTIONS
-        SELECT 
+        SELECT
             <cfqueryparam value="#next_tid#" cfsqltype="cf_sql_integer">,
             SYSDATE, TRANSTYPESID, <cfqueryparam value='#session.username#' cfsqltype="cf_sql_varchar">,
             TRANSQTY, POID, CPNID, ISSUEDTO, ISSUEDFOR, ASSEMBLY, USERCOMMENT1, USERCOMMENT2, USERCOMMENT3,
