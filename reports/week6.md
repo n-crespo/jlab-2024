@@ -23,7 +23,7 @@
 
 - finally finished large code rewrite to optimize flow
 - squashed all bugs relating to form redirection
-- removed need for extra submitTravID.com file
+- removed need for extra `submitTravID.cfm` file
 - picked up poster from document control
 - finished final report
 
