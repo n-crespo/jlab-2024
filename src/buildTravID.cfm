@@ -1,6 +1,6 @@
 <!--- this is needed because the page reloads on form submit --->
 <cfif not isDefined("form.travsearch")>
-    <!-- transaction id input -->
+    <!--- transaction id input --->
     <div id="tid_input">
         <cfform format="html" method="post" preservedata="no" align="left">
             Enter Transaction ID: <cfinput name="tid" type="text" maxlength="9" autofocus>
@@ -20,7 +20,7 @@
 </cfif>
 
 
-<!-- ensure cookies are set, tid has been submitted -->
+<!--- ensure cookies are set, tid has been submitted --->
 <cfif isDefined("tid") && #tid# neq "" && isNumeric("#tid#") && isDefined("cookie.wca") && isDefined("cookie.action") && isDefined("cookie.loc_id")>
     <!--- check if logs should be updated, update if needed--->
     <cfinvoke component="#application.area#.Components.Travelers.TravIDBuilder" method="shouldUpdateLogs" returnvariable="shouldUpdateLogs" tid="#tid#">
