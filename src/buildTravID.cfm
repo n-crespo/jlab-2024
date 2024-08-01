@@ -29,7 +29,7 @@
     <cfinvoke component="#application.area#.Components.Travelers.TravIDBuilder" method="updateTransactionLog" tid="#tid#">
   </cfif>
 
-  <!-- build traveler ID-->
+  <!--- build traveler ID --->
   <cfinvoke component="#application.area#.Components.Travelers.TravIDBuilder" method="getTravID" returnVariable="trav_id" tid="#tid#" workcenter="#cookie.wca#" action="#cookie.action#">
 
   <!--- try  to get revision number --->
