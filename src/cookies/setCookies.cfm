@@ -28,21 +28,20 @@
 
 <!--- get location IDs --->
 <cfquery name = "getLocIds" datasource = "#application.FacilityDSN#">
-    SELECT LOCATIONID
-    FROM INV_LOCATIONS
+  SELECT LOCATIONID
+  FROM INV_LOCATIONS
 </cfquery>
 
 <!--- dropdowns, executes form_submit.cfm once submitted --->
 <cfform format="html" action="submitCookies.cfm" method="post" preservedata="yes">
-	Select a workcenter: 
-<cfselect name="wca" query="getWCAs" display="ID_DESC" required="Yes" value="ACRONYM_ID" message="Please select a work center." > </cfselect>
-<br>Select an action:
+  Select a workcenter:
+  <cfselect name="wca" query="getWCAs" display="ID_DESC" required="Yes" value="ACRONYM_ID" message="Please select a work center."> </cfselect>
+  <br>Select an action:
 	<cfselect name="action" queryPosition="below" query="getActions" display="ID_DESC" required="Yes" message="Please select an action." value="ACRONYM_ID">
-
-	<option value='NULL'>NULL</option>
+    <option value='NULL'>NULL</option>
 	</cfselect><br>
-
-    Select the location ID: <cfselect name="loc_id" query="getLocIds" required="No" value="LOCATIONID" multiple="No"></cfselect>
+    Select the location ID:
+   <cfselect name="loc_id" query="getLocIds" required="No" value="LOCATIONID" multiple="No"></cfselect>
 	<br>
-	<input type="Submit" value="Submit">  
+	<input type="Submit" value="Submit">
 </cfform>
