@@ -6,7 +6,7 @@
 
 - `cfset`
 
-```cf
+```cfm
 <cfset ThisIs = "fun">
 ```
 
@@ -123,7 +123,7 @@
 
 - display struct contents with `cfloop` and `collection` parameter
 
-```cf
+```cfm
 <cfloop collection="#FruitBasket#" item="fruit">
   <cfoutput>I #FruitBasket[fruit]# #fruit#</cfoutput><br />
 </cfloop>
@@ -138,7 +138,7 @@
 - contain series of columns with rows
 - basically a spreadsheet
 
-```cf
+```cfm
 <cfquery name="FruitQuery" datasource="fruit">
   SELECT Name, Price
   FROM FruitStore
@@ -239,7 +239,7 @@
 - boolean values are all lowercase
 - negative values and 0 evaluate to false
 
-```cf
+```cfm
 len( myStringVar ); // returns a number
 isNull( mySimpleVar ); // returns a Boolean
 arrayLen( myArray ); // returns a number
@@ -255,7 +255,7 @@ arrayLen( myArray ); // returns a number
 
 - script example:
 
-```cf
+```cfm
 <cfscript>
     if ( myValue == 'ColdFusion' ) {
         ..code..
@@ -273,11 +273,10 @@ arrayLen( myArray ); // returns a number
   - `NOT / !`
   - `XOR, EQV`
   - `IMP - implication`
-  -
 
 ### Switch Case
 
-```cf
+```cfm
 <cfswitch expression="#myVar#">
     <cfcase value="1">
         ..code..
@@ -293,6 +292,9 @@ arrayLen( myArray ); // returns a number
 
 ### Ternary Operator
 
-```cf
+```cfm
 x = ( myVar == 1 ) ? 1 : 277;
 ```
+
+- this is a list
+  - this is a list
